@@ -28,7 +28,10 @@ export default {
     return {
       MenuItem: [
         {index:'1',name:'破损的短剑',path:'/weapon/WornShortsword'},
-        {index:'2',name:'镶钉手套',path:'/weapon/StuddedGloves'}
+        {index:'2',name:'镶钉手套',path:'/weapon/StuddedGloves'},
+        {index:'3',name:'匕首',path:'/weapon/Dagger'},
+        {index:'4',name: '法师魔杖',path:'/weapon/MageStaff'},
+
       ]
     }
   }

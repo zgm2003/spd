@@ -10,7 +10,7 @@
       <el-menu-item :index="item.index" v-for="(item,index) in MenuItem" :key="index" @click="$router.push(item.path)">{{item.name}}</el-menu-item>
 
       <div class="flex-grow" />
-      <el-menu-item index="8" >
+      <el-menu-item index="100" >
         <el-input
             v-model="input1"
             style="width: 240px"

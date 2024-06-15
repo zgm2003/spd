@@ -29,6 +29,16 @@ const routes = [
                         name:'StuddedGloves',
                         component:()=>import('./views/weapon/StuddedGloves.vue')
                     },
+                    {
+                        path:'/weapon/Dagger',
+                        name:'DaggerView',
+                        component:()=>import('./views/weapon/DaggerView.vue')
+                    },
+                    {
+                        path:'/weapon/MageStaff',
+                        name:'MageStaff',
+                        component:()=>import('./views/weapon/MageStaff.vue')
+                    }
                 ]
             },
             {
