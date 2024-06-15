@@ -42,7 +42,7 @@ export default {
 
   .left {
    .el-menu{
-     width: 200px;
+     width: auto;
      height: 90vh;
    }
   }
