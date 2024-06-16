@@ -12,8 +12,7 @@ export const useMenuStore = defineStore({
             { type: '1', index: '3', name: '匕首', path: '/weapon/Dagger', url: 'https://static.wikia.nocookie.net/pixeldungeon/images/4/45/Dagger.png' },
             { type: '1', index: '4', name: '法师魔杖', path: '/weapon/MageStaff' },
             // 飞镖类 index 全部为 2
-            { type: '2', index: '1', name: '小飞镖', path: '/darts/XiaoFeibiao' },
-
+            { type: '2', index: '1', name: '小飞镖', path: '/darts/XiaoFeibiao' }
             // 其他菜单项
         ]
     }),
