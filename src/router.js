@@ -45,6 +45,15 @@ const routes = [
                 path:'/darts',
                 name:'DartsView',
                 component: ()=>import('./views/DartsView.vue'),
+                redirect:'/darts/XiaoFeibiao',
+                children:[
+                    {
+                        path:'/darts/XiaoFeibiao',
+                        name:'XiaoFeibiao',
+                        component:()=>import('./views/darts/XiaoFeibiao.vue')
+                    },
+
+                ]
             },
             {
                 path:'/armor',

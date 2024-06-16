@@ -2,14 +2,15 @@
   <div class="box">
     <div class="left">
       <el-menu
-          default-active="1"
+          :default-active="menuStore.activeSidebarMenu"
           class="el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose"
+          @select="handleMenuSelect"
       >
-        <el-menu-item :index="item.index" v-for="(item,index) in MenuItem" :key="index" @click="$router.push(item.path)">
-
-          <span>{{item.name}}</span>
+        <el-menu-item :index="item.index" v-for="(item,index) in weaponItems" :key="index" @click="$router.push(item.path)">
+          <el-image style="width: 48px;height: 48px;" :src="item.url"/>
+          {{item.name}}
         </el-menu-item>
 
 
@@ -22,19 +23,26 @@
 </template>
 
 <script>
+import { useMenuStore } from '@/store/menuStore';
 export default {
   name: 'WeaponView',
   data() {
     return {
-      MenuItem: [
-        {index:'1',name:'破损的短剑',path:'/weapon/WornShortsword'},
-        {index:'2',name:'镶钉手套',path:'/weapon/StuddedGloves'},
-        {index:'3',name:'匕首',path:'/weapon/Dagger'},
-        {index:'4',name: '法师魔杖',path:'/weapon/MageStaff'},
 
-      ]
     }
-  }
+  },
+  computed: {
+    menuStore() {
+      return useMenuStore();
+    },
+    weaponItems() {
+      return this.menuStore.getMenuItemsByType('1');
+    }
+  },
+  methods: {
+
+  },
+
 }
 </script>
 
