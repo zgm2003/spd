@@ -8,7 +8,7 @@
         v-for="(item, index) in filteredItems"
         :key="index"
         :index="item.index"
-        @click="$router.push(item.path)"
+        @click="navigateTo(item)"
     >
       <el-image style="width: 48px; height: 48px;" :src="item.url" />
       {{ item.name }}
@@ -38,6 +38,12 @@ export default {
   methods: {
     handleMenuSelect(index) {
       this.menuStore.setActiveSidebarMenu(index);
+    },
+    navigateTo(item) {
+      this.$router.push(item.path).then(() => {
+        this.menuStore.setActiveTopMenu(item.type);
+        this.menuStore.setActiveSidebarMenu(item.index);
+      });
     }
   },
   mounted() {

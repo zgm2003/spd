@@ -8,7 +8,6 @@
           @select="handleSelect"
       >
         <el-menu-item :index="item.index" v-for="(item, index) in MenuItem" :key="index" @click="navigateTo(item)">{{item.name}}</el-menu-item>
-
         <div class="flex-grow" />
         <el-sub-menu index="100">
           <template #title>
@@ -88,7 +87,7 @@ export default {
       const selectedItem = this.MenuItem.find(item => item.index === index);
       if (selectedItem) {
         this.menuStore.setActiveTopMenu(selectedItem.index);
-        this.menuStore.setActiveSidebarMenu('1'); // 默认选择第一个子菜单项
+        this.menuStore.setActiveSidebarMenu('1');
       }
     }
   }
