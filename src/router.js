@@ -52,6 +52,11 @@ const routes = [
                         name:'XiaoFeibiao',
                         component:()=>import('./views/darts/XiaoFeibiao.vue')
                     },
+                    {
+                        path:'/darts/DaFeibiao',
+                        name:'DaFeibiao',
+                        component:()=>import('./views/darts/DaFeibiao.vue')
+                    },
 
                 ]
             },
